@@ -4,6 +4,9 @@ require('dotenv').config();
 
 
 const routerAuth = require('./routes/auth.routes');
+const routerTrans = require('./routes/trans.routes');
+const routerTaux = require('./routes/taux.routes');
+
 
 const app = express();
 
@@ -14,5 +17,7 @@ app.use(cors());
 
 // router  
 app.use('/auth', routerAuth); 
+app.use('/transaction', routerTrans); 
+app.use('/taux', routerTaux); 
 
 module.exports = app 

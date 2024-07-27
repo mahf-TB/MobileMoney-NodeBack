@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     });
   
     Client.associate = (models) => {
-        Client.hasMany(models.Compte, { foreignKey: "id_client" });
+        Client.hasMany(models.Compte, { foreignKey: "id_client", targetKey: 'id'  });
     };
   
     return Client;

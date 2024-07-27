@@ -18,7 +18,7 @@ const sequelize = new Sequelize(dbConf.DB, dbConf.USER, dbConf.PASSWORD, {
 });
 
 sequelize
-  .authenticate()
+  .authenticate() 
   .then(() => {
     console.log("connection established...!");
   })

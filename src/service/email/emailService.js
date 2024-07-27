@@ -13,10 +13,9 @@ const sendVerificationEmail = (email, code) => {
     const mailOptions = {
         from: 'mahefatb@gmail.com',
         to: email,
-        subject: 'Votre code de vérification',
+        subject: 'Code de vérification',
         text: `Votre code de vérification est : ${code}`
     };
-
     return transporter.sendMail(mailOptions);
 };
 
